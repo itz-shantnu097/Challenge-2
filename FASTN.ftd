@@ -1,18 +1,3 @@
--- import: fastn
+-- import: fastn as f
 
--- fastn.package: itz-shantnu097.github.io/challenge-2
-favicon: /-/itz-shantnu097.github.io/challenge-2/favicon.ico
-
--- fastn.dependency: fastn-community.github.io/doc-site as doc-site
--- fastn.dependency: fastn-community.github.io/footer
--- fastn.dependency: fastn-community.github.io/roboto-typography
-
--- fastn.auto-import: itz-shantnu097.github.io/challenge-2/FASTN/ds
--- fastn.auto-import: itz-shantnu097.github.io/challenge-2/assets
--- fastn.auto-import: doc-site
-
--- fastn.sitemap:
-
-# Home: index.html
-
-- Right Sidebar Sample: /sidebar/
+-- f.package: Challenge2
