@@ -1,0 +1,95 @@
+-- component login:
+caption title:
+string username:
+string forgot-text:
+string login-text:
+string register-text:
+string new-user-text:
+boolean $is-hover: false
+optional ftd.color hover-color:
+
+-- ftd.column:
+background.solid: #f0f0f0
+align-content: center
+width.fixed.px: 300
+border-radius.px: 20
+padding.px: 20
+
+-- ftd.text: $login.title
+role: $inherited.types.heading-medium
+
+-- ftd.container:
+height.fixed.px: 25
+
+-- ftd.text-input:
+placeholder: Username
+width.fixed.percent: 100
+margin-vertical.px: 10
+padding-horizontal.px: 10
+padding-vertical.px: 10
+border-radius.px: 10
+
+-- ftd.text-input:
+placeholder: Password
+type: password
+width.fixed.percent: 100
+margin-vertical.px: 10
+padding-horizontal.px: 10
+padding-vertical.px: 10
+border-radius.px: 10
+
+-- ftd.text: $login.forgot-text
+role: $forgotStyle
+color: #0000bb
+text-align: end
+width.fixed.percent: 100
+link: www.forgotpassword.com
+
+-- ftd.text: $login.login-text
+role: $loginStyle
+color: white
+text-align: center
+width.fixed.percent: 60
+margin.px: 20
+padding-vertical.px: 10
+border-radius.px: 20
+background.solid: #2769e3
+background.solid if { login.is-hover }: $login.hover-color
+link: www.login.com
+$on-mouse-enter$: $ftd.set-bool($a = $login.is-hover, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $login.is-hover, v = false)
+
+-- ftd.row:
+margin-vertical.px: 10
+spacing.fixed.px: 5
+
+-- ftd.text: $login.new-user-text
+role: $registerStyle
+
+-- ftd.text: $login.register-text
+role: $registerStyle
+color: #0000bb
+link: www.register.com
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: login
+
+-- ftd.type loginStyle:
+size.px: 20
+font-family: Arial
+font-align: center
+
+-- ftd.type registerStyle:
+size.px: 15
+font-family: Arial
+font-align: center
+
+-- ftd.type forgotStyle:
+size.px: 12
+font-family: Arial
+
+-- ftd.color change-color:
+light: #4fcbfb
